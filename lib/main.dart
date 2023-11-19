@@ -1,4 +1,6 @@
+import 'package:coffe/detail_screen.dart';
 import 'package:coffe/home_screen.dart';
+import 'package:coffe/order_screen.dart';
 import 'package:coffe/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,10 +35,8 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        
       ),
-      home: const HomeScreen() ,
+      home: const DetailScreen(),
     );
   }
 }
-
