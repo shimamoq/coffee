@@ -1,3 +1,7 @@
+import 'dart:async';
+
+import 'package:coffe/home_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -8,6 +12,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -39,9 +44,11 @@ Positioned(
     MaterialButton(
       color: Color(0xffC67C4E),
       minWidth: 315,
-height: 62,
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+    height: 62,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       onPressed: (){
+                                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen(onTap: () {  },),));
 
     },child: Text("Get Started",style: TextStyle(color: Colors.white,fontSize: 17),),)
 
