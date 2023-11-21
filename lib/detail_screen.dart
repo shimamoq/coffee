@@ -1,8 +1,9 @@
+import 'package:coffe/home_screen.dart';
 import 'package:coffe/order_screen.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
-  const DetailScreen({super.key});
+  const DetailScreen({super.key, required Null Function() onTap});
 
   @override
   State<DetailScreen> createState() => _DetailScreennState();
@@ -20,8 +21,13 @@ class _DetailScreennState extends State<DetailScreen> {
           elevation: 0,
           leading: IconButton(
             color: Colors.black,
-            onPressed: () {},
-            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+
+                                              Navigator.pop(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen(onTap: () {  },),));
+
+            },
+            icon: const Icon(Icons.arrow_back_ios),
           ),
           actions: [
             GestureDetector(
@@ -35,10 +41,15 @@ class _DetailScreennState extends State<DetailScreen> {
               ),
             ),
           ],
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
           centerTitle: true,
           toolbarHeight: 70,
           backgroundColor: Colors.white,
-          title: Text(
+          title: const Text(
             "Details ",
             style: TextStyle(
                 color: Colors.black,
@@ -49,7 +60,7 @@ class _DetailScreennState extends State<DetailScreen> {
         body: Column(children: [
           Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              const Padding(padding: EdgeInsets.only(left: 25)),
               Image.asset(
                 "assets/coffe.jpg",
                 height: 260,
@@ -60,9 +71,9 @@ class _DetailScreennState extends State<DetailScreen> {
           Container(
             height: 20,
           ),
-          Row(
+          const Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              Padding(padding: EdgeInsets.only(left: 25)),
               Text("Cappucino ",
                   style: TextStyle(
                       fontSize: 25,
@@ -73,9 +84,13 @@ class _DetailScreennState extends State<DetailScreen> {
           Container(
             height: 8,
           ),
-          Row(
+          const Row(
             children: [
+<<<<<<< HEAD
+              Padding(padding: EdgeInsets.only(left: 25)),
+=======
               Padding(padding: const EdgeInsets.only(left: 30)),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
               Text("with Chocolate ",
                   style: TextStyle(
                       fontSize: 15,
@@ -88,6 +103,24 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
+<<<<<<< HEAD
+              const Padding(padding: EdgeInsets.only(left: 25)),
+              Image.asset(
+                "assets/star.jpg",
+                height: 22,
+                width: 22,
+              ),
+              // ),
+              Row(
+                children: [
+                  const Padding(padding: EdgeInsets.only(left: 5)),
+                  Image.asset(
+                    "assets/0000.jpg",
+                    height: 20,
+                    width: 62,
+                  ),
+                ],
+=======
               Padding(padding: const EdgeInsets.only(left: 25)),
               GestureDetector(
                 onTap: () {
@@ -120,10 +153,17 @@ class _DetailScreennState extends State<DetailScreen> {
                 "(230)",
                 style: TextStyle(
                     fontSize: 13, color: Colors.black26, fontFamily: "sora"),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
               ),
               Container(
                 width: 165,
               ),
+<<<<<<< HEAD
+              Image.asset(
+                "assets/Frame 19.jpg",
+                height: 44,
+                width: 52,
+=======
               GestureDetector(
                 onTap: () {
                   print("bune");
@@ -133,6 +173,7 @@ class _DetailScreennState extends State<DetailScreen> {
                   height: 44,
                   width: 52,
                 ),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
               ),
               Container(
                 width: 9,
@@ -150,21 +191,21 @@ class _DetailScreennState extends State<DetailScreen> {
             height: 25,
           ),
           Row(children: [
-            Padding(padding: const EdgeInsets.only(left: 25)),
+            const Padding(padding: EdgeInsets.only(left: 25)),
             Image.asset(
               "assets/Line.jpg",
               height: 2,
               width: 354,
-              color: Color(0xffEAEAEA),
+              color: const Color(0xffEAEAEA),
             ),
           ]),
           Container(
             width: 9,
             height: 13,
           ),
-          Row(
+          const Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              Padding(padding: EdgeInsets.only(left: 25)),
               Text("Description",
                   style: TextStyle(
                       fontSize: 20,
@@ -177,7 +218,7 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              const Padding(padding: EdgeInsets.only(left: 25)),
               Image.asset(
                 "assets/Read More.jpg",
                 height: 100,
@@ -185,9 +226,9 @@ class _DetailScreennState extends State<DetailScreen> {
               )
             ],
           ),
-          Row(
+          const Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              Padding(padding: EdgeInsets.only(left: 25)),
               Text("Size",
                   style: TextStyle(
                       fontSize: 17,
@@ -200,45 +241,50 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               MaterialButton(
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Color(0xffDEDEDE)),
+                  side: const BorderSide(color: Color(0xffDEDEDE)),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
+<<<<<<< HEAD
+
+                disabledColor: const Color(0xffDEDEDE),
+=======
                 disabledColor: Color(0xffDEDEDE),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                 disabledTextColor: (Colors.black),
-                focusColor: Color(0xffFFF5EE),
+                focusColor: const Color(0xffFFF5EE),
                 color: Colors.white,
                 height: 43,
                 minWidth: 100,
                 elevation: 0,
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "S",
                   style: TextStyle(fontSize: 15, color: Colors.black),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               MaterialButton(
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Color(0xffC67C4E)),
+                  side: const BorderSide(color: Color(0xffC67C4E)),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
                 elevation: 0,
-                color: Color(0xffFFF5EE),
+                color: const Color(0xffFFF5EE),
                 height: 43,
                 minWidth: 100,
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "M",
                   style: TextStyle(fontSize: 15, color: Color(0xffC67C4E)),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               MaterialButton(
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(color: Color(0xffDEDEDE)),
+                  side: const BorderSide(color: Color(0xffDEDEDE)),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
                 elevation: 0,
@@ -246,12 +292,12 @@ class _DetailScreennState extends State<DetailScreen> {
                 height: 43,
                 minWidth: 100,
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "L",
                   style: TextStyle(fontSize: 15, color: Colors.black),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
           Container(
@@ -259,10 +305,10 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 17)),
+              const Padding(padding: EdgeInsets.only(left: 17)),
               Column(
                 children: [
-                  Text(
+                  const Text(
                     "Price",
                     style:
                         TextStyle(color: Color(0xff9B9B9B), fontFamily: "sora"),
@@ -272,7 +318,7 @@ class _DetailScreennState extends State<DetailScreen> {
                   ),
                   Row(
                     children: [
-                      Padding(padding: const EdgeInsets.only(left: 17)),
+                      const Padding(padding: EdgeInsets.only(left: 17)),
                       Image.asset(
                         "assets/ppp.jpg",
                         height: 24,
@@ -288,7 +334,11 @@ class _DetailScreennState extends State<DetailScreen> {
                       //   ),
                       // )
                     ],
+<<<<<<< HEAD
+                  )
+=======
                   ),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                 ],
               ),
               Container(
@@ -300,17 +350,17 @@ class _DetailScreennState extends State<DetailScreen> {
                     borderRadius: BorderRadius.circular(18.0),
                   ),
                   elevation: 0,
-                  color: Color(0xffC67C4E),
+                  color: const Color(0xffC67C4E),
                   height: 62,
                   minWidth: 217,
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OrderScreen(),
+                          builder: (context) => const OrderScreen(),
                         ));
                   },
-                  child: Text(
+                  child: const Text(
                     "Buy Now",
                     style: TextStyle(
                         fontSize: 15,
@@ -320,7 +370,7 @@ class _DetailScreennState extends State<DetailScreen> {
                   ),
                 ),
               ),
-              Center(
+              const Center(
                 child: Wrap(
                   children: [],
                 ),

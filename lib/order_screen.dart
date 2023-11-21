@@ -1,10 +1,7 @@
+import 'package:coffe/delivery_screen.dart';
+import 'package:coffe/detail_screen.dart';
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
-
-//class MyApp extends StatelessWidget {
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
 
@@ -24,15 +21,20 @@ class OrderScreenState extends State<OrderScreen> {
             elevation: 0,
             leading: IconButton(
               color: Colors.black,
-              onPressed: () {},
-              icon: Icon(
+              onPressed: () {
+                
+                                              Navigator.pop(context,
+                    MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
+
+              },
+              icon: const Icon(
                 Icons.arrow_back_ios,
               ),
             ),
             centerTitle: true,
             toolbarHeight: 80,
             backgroundColor: Colors.white,
-            title: Text(
+            title: const Text(
               "Order",
               style: TextStyle(
                   color: Colors.black,
@@ -45,28 +47,28 @@ class OrderScreenState extends State<OrderScreen> {
               Stack(
                 children: [
                   Row(children: [
-                    Padding(padding: const EdgeInsets.only(left: 50)),
+                    const Padding(padding: EdgeInsets.only(left: 50)),
                     Container(
                       height: 48,
                       width: 315,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14),
-                        color: Color(0xffF2F2F2),
+                        color: const Color(0xffF2F2F2),
                       ),
                     ),
                   ]),
                   Row(children: [
-                    Padding(padding: const EdgeInsets.only(left: 40)),
+                    const Padding(padding: EdgeInsets.only(left: 40)),
                     MaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       elevation: 0,
-                      color: Color(0xffC67C4E),
+                      color: const Color(0xffC67C4E),
                       height: 40,
                       minWidth: 153.5,
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Deliver",
                         style: TextStyle(
                             fontSize: 15,
@@ -80,11 +82,11 @@ class OrderScreenState extends State<OrderScreen> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       elevation: 0,
-                      color: Color(0xffF2F2F2),
+                      color: const Color(0xffF2F2F2),
                       height: 40,
                       minWidth: 153.5,
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Pick Up",
                         style: TextStyle(
                             color: Colors.black,
@@ -98,9 +100,9 @@ class OrderScreenState extends State<OrderScreen> {
               Container(
                 height: 30,
               ),
-              Row(
+              const Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 40)),
+                  Padding(padding: EdgeInsets.only(left: 40)),
                   Text(
                     "Delivery Adress",
                     style: TextStyle(
@@ -115,7 +117,7 @@ class OrderScreenState extends State<OrderScreen> {
               ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 40)),
+                  const Padding(padding: EdgeInsets.only(left: 40)),
                   Image.asset(
                     "assets/Frame 48.jpg",
                     height: 41,
@@ -125,18 +127,18 @@ class OrderScreenState extends State<OrderScreen> {
               ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 40)),
+                  const Padding(padding: EdgeInsets.only(left: 40)),
                   MaterialButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14.0),
-                      side: BorderSide(color: Color(0xffF2F2F2)),
+                      side: const BorderSide(color: Color(0xffF2F2F2)),
                     ),
                     elevation: 0,
                     color: Colors.white,
                     height: 27,
                     minWidth: 120,
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Edit Adress",
                       style: TextStyle(
                           color: Color(0xff303336),
@@ -150,14 +152,14 @@ class OrderScreenState extends State<OrderScreen> {
                   MaterialButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14.0),
-                      side: BorderSide(color: Color(0xffF2F2F2)),
+                      side: const BorderSide(color: Color(0xffF2F2F2)),
                     ),
                     elevation: 0,
                     color: Colors.white,
                     height: 27,
                     minWidth: 110,
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Add Note",
                       style: TextStyle(
                           color: Color(0xff303336),
@@ -168,13 +170,13 @@ class OrderScreenState extends State<OrderScreen> {
                 ],
               ),
               Row(children: [
-                Padding(padding: const EdgeInsets.only(left: 30)),
+                const Padding(padding: EdgeInsets.only(left: 30)),
                 Image.asset("assets/Line.jpg", height: 41, width: 350),
               ] //color: Color(0xffEAEAEA),
                   ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 40)),
+                  const Padding(padding: EdgeInsets.only(left: 40)),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(17),
                     child: Image.asset(
@@ -188,7 +190,7 @@ class OrderScreenState extends State<OrderScreen> {
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Cappucino",
                         style: TextStyle(
                             fontSize: 16,
@@ -198,7 +200,7 @@ class OrderScreenState extends State<OrderScreen> {
                       Container(
                         height: 7,
                       ),
-                      Text(
+                      const Text(
                         "with Chocolate",
                         style: TextStyle(
                             fontSize: 12,
@@ -270,7 +272,16 @@ class OrderScreenState extends State<OrderScreen> {
                
                 Image.asset("assets/Rectangle 1711.jpg",
                     height: 50, width: 410),
+<<<<<<< HEAD
+              ] //color: Color(0xffEAEAEA),
+                  ),
+              Row(children: [
+                const Padding(padding: EdgeInsets.only(left: 5)),
+                Image.asset("assets/Group 3153.jpg", height: 56, width: 400),
+              ] //color: Color(0xffEAEAEA),
+=======
               ] 
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                   ),
              
               Image.asset("assets/Group 3153.jpg", height: 60, width: 430),
@@ -278,9 +289,9 @@ class OrderScreenState extends State<OrderScreen> {
               Container(
                 height: 25,
               ),
-              Row(
+              const Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 45)),
+                  Padding(padding: EdgeInsets.only(left: 45)),
                   Text(
                     "Payment Summary",
                     style: TextStyle(
@@ -295,15 +306,15 @@ class OrderScreenState extends State<OrderScreen> {
               ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 45)),
+                  const Padding(padding: EdgeInsets.only(left: 45)),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Price",
                         style:
                             TextStyle(fontSize: (14), color: Color(0xff2F2D2C)),
                       ),
-                      Padding(padding: const EdgeInsets.only(left: 246)),
+                      const Padding(padding: EdgeInsets.only(left: 246)),
                       Image.asset(
                         "assets/33333.jpg",
                         width: 43,
@@ -318,17 +329,17 @@ class OrderScreenState extends State<OrderScreen> {
               ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 45)),
+                  const Padding(padding: EdgeInsets.only(left: 45)),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Delivery Free",
                         style: TextStyle(
                             fontSize: (14),
                             color: Color(0xff2F2D2C),
                             fontFamily: "sora"),
                       ),
-                      Padding(padding: const EdgeInsets.only(left: 163)),
+                      const Padding(padding: EdgeInsets.only(left: 163)),
                       Image.asset(
                         "assets/444444.jpg",
                         width: 77,
@@ -339,23 +350,23 @@ class OrderScreenState extends State<OrderScreen> {
                 ],
               ),
               Row(children: [
-                Padding(padding: const EdgeInsets.only(left: 30)),
+                const Padding(padding: EdgeInsets.only(left: 30)),
                 Image.asset("assets/Line.jpg", height: 41, width: 350),
               ] //color: Color(0xffEAEAEA),
                   ),
               Row(
                 children: [
-                  Padding(padding: const EdgeInsets.only(left: 45)),
+                  const Padding(padding: EdgeInsets.only(left: 45)),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Total Payment",
                         style: TextStyle(
                             fontSize: (14),
                             color: Color(0xff2F2D2C),
                             fontFamily: "sora"),
                       ),
-                      Padding(padding: const EdgeInsets.only(left: 185)),
+                      const Padding(padding: EdgeInsets.only(left: 185)),
                       Image.asset(
                         "assets/5555.jpg",
                         width: 43,
@@ -369,7 +380,7 @@ class OrderScreenState extends State<OrderScreen> {
                 height: 8,
               ),
               Row(children: [
-                Padding(padding: const EdgeInsets.only(left: 45)),
+                const Padding(padding: EdgeInsets.only(left: 45)),
                 Row(
                   children: [
                  
@@ -384,18 +395,23 @@ class OrderScreenState extends State<OrderScreen> {
                   width: 10,
                 ),
                 Stack(children: [
+<<<<<<< HEAD
+
+                  Row(children: [
+=======
                   Row(children: [
                  
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                     MaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                       elevation: 0,
-                      color: Color(0xffC67C4E),
+                      color: const Color(0xffC67C4E),
                       height: 24,
                       minWidth: 51,
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Cash",
                         style: TextStyle(fontSize: 10, color: Colors.white),
                       ),
@@ -405,7 +421,7 @@ class OrderScreenState extends State<OrderScreen> {
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         elevation: 0,
-                        color: Color(0xffF2F2F2),
+                        color: const Color(0xffF2F2F2),
                         height: 24,
                         minWidth: 51,
                         onPressed: () {},
@@ -417,9 +433,16 @@ class OrderScreenState extends State<OrderScreen> {
                   ]),
                 ]),
                 Row(children: [
-                  Padding(padding: const EdgeInsets.only(left: 42)),
+                  const Padding(padding: EdgeInsets.only(left: 42)),
                   Row(
                     children: [
+<<<<<<< HEAD
+                      const Padding(padding: EdgeInsets.only(left: 100)),
+                      Image.asset(
+                        "assets/dots.jpg",
+                        width: 24,
+                        height: 24,
+=======
                       Padding(padding: const EdgeInsets.only(left: 100)),
                       GestureDetector(
                         onTap: () {
@@ -430,6 +453,7 @@ class OrderScreenState extends State<OrderScreen> {
                           width: 24,
                           height: 24,
                         ),
+>>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                       ),
                     ],
                   )
@@ -439,17 +463,23 @@ class OrderScreenState extends State<OrderScreen> {
                 height: 8,
               ),
               Row(children: [
-                Padding(padding: const EdgeInsets.only(left: 50)),
+                const Padding(padding: EdgeInsets.only(left: 50)),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 0,
-                  color: Color(0xffC67C4E),
+                  color: const Color(0xffC67C4E),
                   height: 62,
                   minWidth: 315,
-                  onPressed: () {},
-                  child: Text(
+                  onPressed: () {
+
+                                    Navigator.push(context,
+  
+                        MaterialPageRoute(builder: (context) => DeliveryScreen(onTap: () {  }, title: '',),));
+
+                  },
+                  child: const Text(
                     "Order",
                     style: TextStyle(
                         fontSize: 18, color: Colors.white, fontFamily: "sora"),

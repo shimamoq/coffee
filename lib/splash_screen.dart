@@ -1,3 +1,4 @@
+import 'package:coffe/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -8,6 +9,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -31,19 +33,21 @@ Positioned(
   
           Image.asset("assets/text.png",height:129 ,width: 315,),
   
-    SizedBox(height: 20,),
+    const SizedBox(height: 20,),
 
         Image.asset("assets/text2.png",height:44,width:280,),
-    SizedBox(height: 20,),
+    const SizedBox(height: 20,),
 
     MaterialButton(
-      color: Color(0xffC67C4E),
+      color: const Color(0xffC67C4E),
       minWidth: 315,
-height: 62,
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+    height: 62,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       onPressed: (){
+                                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen(onTap: () {  },),));
 
-    },child: Text("Get Started",style: TextStyle(color: Colors.white,fontSize: 17),),)
+    },child: const Text("Get Started",style: TextStyle(color: Colors.white,fontSize: 17),),)
 
 // ElevatedButton(
 //   style: ElevatedButton.styleFrom(
