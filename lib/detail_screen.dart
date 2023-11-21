@@ -1,11 +1,6 @@
 import 'package:coffe/order_screen.dart';
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
-
-//class MyApp extends StatelessWidget {
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
 
@@ -14,6 +9,7 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreennState extends State<DetailScreen> {
+  double i = 4.8;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,28 +23,27 @@ class _DetailScreennState extends State<DetailScreen> {
             onPressed: () {},
             icon: Icon(Icons.arrow_back_ios),
           ),
-
           actions: [
-            Image.asset(
-              "assets/Heart.jpg",
-              height: 35,
-              width: 35,
+            GestureDetector(
+              onTap: () {
+                print("faivorte");
+              },
+              child: Image.asset(
+                "assets/Heart.jpg",
+                height: 35,
+                width: 35,
+              ),
             ),
           ],
-
-          //   IconButton(
-          //       onPressed: () {},
-          //       icon: Icon(
-          //         Icons.favorite_border_outlined,
-          //         color: Colors.black,
-          //       ))
-
           centerTitle: true,
           toolbarHeight: 70,
           backgroundColor: Colors.white,
           title: Text(
             "Details ",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontFamily: "sora"),
           ),
         ),
         body: Column(children: [
@@ -70,9 +65,9 @@ class _DetailScreennState extends State<DetailScreen> {
               Padding(padding: const EdgeInsets.only(left: 25)),
               Text("Cappucino ",
                   style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ))
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "sora"))
             ],
           ),
           Container(
@@ -80,12 +75,12 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
-              Padding(padding: const EdgeInsets.only(left: 25)),
+              Padding(padding: const EdgeInsets.only(left: 30)),
               Text("with Chocolate ",
                   style: TextStyle(
-                    fontSize: 15,
-                    color: Color(0xff9B9B9B),
-                  )),
+                      fontSize: 15,
+                      color: Color(0xff9B9B9B),
+                      fontFamily: "sora")),
             ],
           ),
           Container(
@@ -94,59 +89,60 @@ class _DetailScreennState extends State<DetailScreen> {
           Row(
             children: [
               Padding(padding: const EdgeInsets.only(left: 25)),
-              //  Expanded(child: Row(children: [Image.asset(
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    i++;
+                  });
 
-              //      "assets/star.jpg",
-              //        height: 22,
-              //        width: 22,)],))
-
-              // GestureDetector(
-              //   onTap: () {},
-              //  child:
-              Image.asset(
-                "assets/star.jpg",
-                height: 22,
-                width: 22,
+                  print(i);
+                },
+                child: Image.asset(
+                  "assets/star.jpg",
+                  height: 22,
+                  width: 22,
+                ),
               ),
-              // ),
-              Row(
-                children: [
-                  Padding(padding: const EdgeInsets.only(left: 5)),
-                  Image.asset(
-                    "assets/0000.jpg",
-                    height: 20,
-                    width: 62,
-                  ),
-                ],
+              Container(
+                width: 5,
               ),
-
-              // Text("4.8 ",
-              //     style: TextStyle(
-              //       fontWeight: FontWeight.bold,
-              //       fontSize: 18,
-              //       color: Colors.black,
-              //     )),
-              // Text("(230)",
-              //     style: TextStyle(
-              //       fontSize: 12,
-              //       color: Color(0xff9B9B9B),
-              //     )),
+              Text(
+                "$i",
+                style: TextStyle(
+                    fontFamily: "sora",
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                width: 4,
+              ),
+              Text(
+                "(230)",
+                style: TextStyle(
+                    fontSize: 13, color: Colors.black26, fontFamily: "sora"),
+              ),
               Container(
                 width: 165,
               ),
-              // GestureDetector(
-              //   onTap: () {},
-              // child:
-              Image.asset(
-                "assets/Frame 19.jpg",
-                height: 44,
-                width: 52,
+              GestureDetector(
+                onTap: () {
+                  print("bune");
+                },
+                child: Image.asset(
+                  "assets/Frame 19.jpg",
+                  height: 44,
+                  width: 52,
+                ),
               ),
-              //  ),
               Container(
                 width: 9,
               ),
-              Image.asset("assets/Frame 20.jpg", height: 44, width: 52),
+              GestureDetector(
+                  onTap: () {
+                    print("milk");
+                  },
+                  child: Image.asset("assets/Frame 20.jpg",
+                      height: 44, width: 52)),
             ],
           ),
           Container(
@@ -171,9 +167,9 @@ class _DetailScreennState extends State<DetailScreen> {
               Padding(padding: const EdgeInsets.only(left: 25)),
               Text("Description",
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ))
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "sora"))
             ],
           ),
           Container(
@@ -194,9 +190,9 @@ class _DetailScreennState extends State<DetailScreen> {
               Padding(padding: const EdgeInsets.only(left: 25)),
               Text("Size",
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ))
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "sora"))
             ],
           ),
           Container(
@@ -210,8 +206,6 @@ class _DetailScreennState extends State<DetailScreen> {
                   side: BorderSide(color: Color(0xffDEDEDE)),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
-
-                //shape: Border.all(color: Color(0xffC67C4E)),
                 disabledColor: Color(0xffDEDEDE),
                 disabledTextColor: (Colors.black),
                 focusColor: Color(0xffFFF5EE),
@@ -270,36 +264,36 @@ class _DetailScreennState extends State<DetailScreen> {
                 children: [
                   Text(
                     "Price",
-                    style: TextStyle(color: Color(0xff9B9B9B)),
+                    style:
+                        TextStyle(color: Color(0xff9B9B9B), fontFamily: "sora"),
+                  ),
+                  Container(
+                    height: 10,
                   ),
                   Row(
                     children: [
                       Padding(padding: const EdgeInsets.only(left: 17)),
                       Image.asset(
                         "assets/ppp.jpg",
-                        height: 23,
-                        width: 56,
+                        height: 24,
+                        width: 60,
                       ),
+                      // Text(
+                      //   "4,53",
+                      //   style: TextStyle(
+                      //     fontFamily: "sora",
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 20,
+                      //     color: Color(0xffC67C4E),
+                      //   ),
+                      // )
                     ],
-                  )
-                  // Text(
-                  //   "4.53",
-                  //   style: TextStyle(
-                  //     color: Color(0xffC67C4E),
-                  //   ),
-                  // ),
+                  ),
                 ],
               ),
               Container(
                 width: 75,
               ),
-              //     bottomNavigationBar:NavigationBar(destination:[
-              //           GestureDetector(onTap:({
-              //             NavigationBar.push(context,MaterialPageRoute(builder: (context)=> OrderScreen(on Tab:(){},),));
-              // },
-              // )
-              // )
-              //         ])
               GestureDetector(
                 child: MaterialButton(
                   shape: RoundedRectangleBorder(
@@ -318,7 +312,11 @@ class _DetailScreennState extends State<DetailScreen> {
                   },
                   child: Text(
                     "Buy Now",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                        fontFamily: "sora",
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
