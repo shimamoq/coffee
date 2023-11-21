@@ -3,7 +3,7 @@ import 'package:coffe/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class OrderScreen extends StatefulWidget {
-  const OrderScreen({super.key});
+  const OrderScreen({super.key, required Null Function() onTap});
 
   @override
   State<OrderScreen> createState() => OrderScreenState();

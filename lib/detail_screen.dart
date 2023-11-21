@@ -28,7 +28,8 @@ class _DetailScreennState extends State<DetailScreen> {
                     builder: (context) => HomeScreen(
                       onTap: () {},
                     ),
-                  ));
+                  )
+                  );
             },
             icon: const Icon(Icons.arrow_back_ios),
           ),
@@ -326,11 +327,9 @@ class _DetailScreennState extends State<DetailScreen> {
                   height: 62,
                   minWidth: 217,
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const OrderScreen(),
-                        ));
+                                                                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OrderScreen(onTap: () {  },),));
+
                   },
                   child: const Text(
                     "Buy Now",

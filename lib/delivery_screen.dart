@@ -1,3 +1,4 @@
+import 'package:coffe/order_screen.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryScreen extends StatefulWidget {
@@ -104,18 +105,29 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
       ),
       Padding(
         padding: const EdgeInsets.only(left: 15, top: 20),
-        child: Image.asset(
-          'assets/Frame 3191.png',
-          height: 44,
-          width: 44,
+        child: GestureDetector(onTap: () {
+                        Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OrderScreen(
+                      onTap: () {},
+                    ),
+                  )
+                  );
+        },
+          child: Image.asset(
+            'assets/Frame 3191.png',
+            height: 80,
+            width: 80,
+          ),
         ),
       ),
       Padding(
         padding: const EdgeInsets.only(top: 20, left: 350),
         child: Image.asset(
           'assets/Frame 3192.png',
-          height: 44,
-          width: 44,
+          height: 80,
+          width: 80,
         ),
       ),
       Padding(
