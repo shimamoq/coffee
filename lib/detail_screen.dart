@@ -22,10 +22,13 @@ class _DetailScreennState extends State<DetailScreen> {
           leading: IconButton(
             color: Colors.black,
             onPressed: () {
-
-                                              Navigator.pop(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen(onTap: () {  },),));
-
+              Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(
+                      onTap: () {},
+                    ),
+                  ));
             },
             icon: const Icon(Icons.arrow_back_ios),
           ),
@@ -41,11 +44,6 @@ class _DetailScreennState extends State<DetailScreen> {
               ),
             ),
           ],
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
           centerTitle: true,
           toolbarHeight: 70,
           backgroundColor: Colors.white,
@@ -86,11 +84,7 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           const Row(
             children: [
-<<<<<<< HEAD
               Padding(padding: EdgeInsets.only(left: 25)),
-=======
-              Padding(padding: const EdgeInsets.only(left: 30)),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
               Text("with Chocolate ",
                   style: TextStyle(
                       fontSize: 15,
@@ -103,25 +97,7 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Row(
             children: [
-<<<<<<< HEAD
               const Padding(padding: EdgeInsets.only(left: 25)),
-              Image.asset(
-                "assets/star.jpg",
-                height: 22,
-                width: 22,
-              ),
-              // ),
-              Row(
-                children: [
-                  const Padding(padding: EdgeInsets.only(left: 5)),
-                  Image.asset(
-                    "assets/0000.jpg",
-                    height: 20,
-                    width: 62,
-                  ),
-                ],
-=======
-              Padding(padding: const EdgeInsets.only(left: 25)),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -137,13 +113,13 @@ class _DetailScreennState extends State<DetailScreen> {
                 ),
               ),
               Container(
-                width: 5,
+                width: 6,
               ),
               Text(
                 "$i",
                 style: TextStyle(
+                    fontSize: 17,
                     fontFamily: "sora",
-                    fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               Container(
@@ -152,18 +128,24 @@ class _DetailScreennState extends State<DetailScreen> {
               Text(
                 "(230)",
                 style: TextStyle(
-                    fontSize: 13, color: Colors.black26, fontFamily: "sora"),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
+                    fontSize: 12,
+                    fontFamily: "sora",
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black26),
               ),
-              Container(
-                width: 165,
-              ),
-<<<<<<< HEAD
-              Image.asset(
-                "assets/Frame 19.jpg",
-                height: 44,
-                width: 52,
-=======
+              // ),
+              // Row(
+              //   children: [
+              //     const Padding(padding: EdgeInsets.only(left: 5)),
+              //     Image.asset(
+              //       "assets/0000.jpg",
+              //       height: 20,
+              //       width: 62,
+              //     ),
+              //   ],
+              // ),
+              Container(width: 165),
+
               GestureDetector(
                 onTap: () {
                   print("bune");
@@ -173,7 +155,6 @@ class _DetailScreennState extends State<DetailScreen> {
                   height: 44,
                   width: 52,
                 ),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
               ),
               Container(
                 width: 9,
@@ -247,12 +228,7 @@ class _DetailScreennState extends State<DetailScreen> {
                   side: const BorderSide(color: Color(0xffDEDEDE)),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
-<<<<<<< HEAD
-
                 disabledColor: const Color(0xffDEDEDE),
-=======
-                disabledColor: Color(0xffDEDEDE),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                 disabledTextColor: (Colors.black),
                 focusColor: const Color(0xffFFF5EE),
                 color: Colors.white,
@@ -334,11 +310,7 @@ class _DetailScreennState extends State<DetailScreen> {
                       //   ),
                       // )
                     ],
-<<<<<<< HEAD
                   )
-=======
-                  ),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                 ],
               ),
               Container(

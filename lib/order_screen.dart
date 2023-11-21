@@ -22,10 +22,13 @@ class OrderScreenState extends State<OrderScreen> {
             leading: IconButton(
               color: Colors.black,
               onPressed: () {
-                
-                                              Navigator.pop(context,
-                    MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
+                Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailScreen(
+                        onTap: () {},
+                      ),
+                    ));
               },
               icon: const Icon(
                 Icons.arrow_back_ios,
@@ -265,27 +268,16 @@ class OrderScreenState extends State<OrderScreen> {
                       ),
                     ),
                   ),
-                
                 ],
               ),
               Row(children: [
-               
                 Image.asset("assets/Rectangle 1711.jpg",
                     height: 50, width: 410),
-<<<<<<< HEAD
-              ] //color: Color(0xffEAEAEA),
-                  ),
+              ]),
               Row(children: [
                 const Padding(padding: EdgeInsets.only(left: 5)),
-                Image.asset("assets/Group 3153.jpg", height: 56, width: 400),
-              ] //color: Color(0xffEAEAEA),
-=======
-              ] 
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
-                  ),
-             
+              ]),
               Image.asset("assets/Group 3153.jpg", height: 60, width: 430),
-
               Container(
                 height: 25,
               ),
@@ -383,7 +375,6 @@ class OrderScreenState extends State<OrderScreen> {
                 const Padding(padding: EdgeInsets.only(left: 45)),
                 Row(
                   children: [
-                 
                     Image.asset(
                       "assets/moneys.jpg",
                       width: 24,
@@ -395,13 +386,7 @@ class OrderScreenState extends State<OrderScreen> {
                   width: 10,
                 ),
                 Stack(children: [
-<<<<<<< HEAD
-
                   Row(children: [
-=======
-                  Row(children: [
-                 
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                     MaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -436,24 +421,11 @@ class OrderScreenState extends State<OrderScreen> {
                   const Padding(padding: EdgeInsets.only(left: 42)),
                   Row(
                     children: [
-<<<<<<< HEAD
                       const Padding(padding: EdgeInsets.only(left: 100)),
                       Image.asset(
                         "assets/dots.jpg",
                         width: 24,
                         height: 24,
-=======
-                      Padding(padding: const EdgeInsets.only(left: 100)),
-                      GestureDetector(
-                        onTap: () {
-                          print("dots");
-                        },
-                        child: Image.asset(
-                          "assets/dots.jpg",
-                          width: 24,
-                          height: 24,
-                        ),
->>>>>>> 852cf305a4fe5f5b8b064b8a460b2bf334d6cff3
                       ),
                     ],
                   )
@@ -473,11 +445,14 @@ class OrderScreenState extends State<OrderScreen> {
                   height: 62,
                   minWidth: 315,
                   onPressed: () {
-
-                                    Navigator.push(context,
-  
-                        MaterialPageRoute(builder: (context) => DeliveryScreen(onTap: () {  }, title: '',),));
-
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DeliveryScreen(
+                            onTap: () {},
+                            title: '',
+                          ),
+                        ));
                   },
                   child: const Text(
                     "Order",
@@ -491,4 +466,3 @@ class OrderScreenState extends State<OrderScreen> {
         ));
   }
 }
-
