@@ -88,7 +88,7 @@ class OrderScreenState extends State<OrderScreen> {
                       elevation: 0,
                       color: const Color(0xffF2F2F2),
                       height: 40,
-                      minWidth: 150,
+                      minWidth: 152,
                       onPressed: () {},
                       child: const Text(
                         "Pick Up",
@@ -214,7 +214,7 @@ class OrderScreenState extends State<OrderScreen> {
                     ],
                   ),
                   Container(
-                    width: 90,
+                    width: 85,
                   ),
                   Container(
                     width: 30,
@@ -223,22 +223,25 @@ class OrderScreenState extends State<OrderScreen> {
                       borderRadius: BorderRadius.circular(40),
                       border: Border.all(color: Colors.black12),
                     ),
-                    padding: EdgeInsets.only(
-                      right: 25,
-                      bottom: 10,
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          i--;
-                        });
-
-                        print(i);
-                      },
-                      icon: Icon(
-                        Icons.remove,
-                        size: 18,
-                        color: Colors.black12,
+                    // padding: EdgeInsets.only(
+                    //   right: 28,
+                    //   bottom: 10,
+                    // ),
+                    child: Positioned(
+                      top: 30,
+                      child: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            i--;
+                          });
+                    
+                          print(i);
+                        },
+                        icon: Icon(
+                          Icons.remove,
+                          size: 13,
+                          color: Colors.black12,
+                        ),
                       ),
                     ),
                   ),
@@ -270,7 +273,8 @@ class OrderScreenState extends State<OrderScreen> {
                       },
                       icon: Icon(
                         Icons.add,
-                        size: 15,
+                        size: 13,
+                        
                       ),
                     ),
                   ),
