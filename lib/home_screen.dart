@@ -24,41 +24,50 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Row(
-                      children: [
-                        Image.asset(
+                  Text("data"),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left:20.0),
+                        child: Image.asset(
                           'assets/Frame.png',
-                          width: 150,
-                          height: 130,
+                          width: 161,
+                          height: 100,
                         ),
-                        const SizedBox(
-                          width: 200,
-                        ),
-                        Image.asset(
+                      ),
+                      const SizedBox(
+                        width: 160,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left:8.0),
+                        child: Image.asset(
                           'assets/photo.png',
                           height: 44,
                           width: 44,
                         ),
-                        const SizedBox(
-                          height: 30,
-                        )
-                      ],
-                    ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      )
+                    ],
                   ),
-                  Image.asset(
-                    'assets/Group 6.png',
-                    width: 350,
-                    height: 70,
+        
+                  Padding(
+                    padding: const EdgeInsets.only(left:7.0),
+                    child: Image.asset(
+                      'assets/Group 6.png',
+                      width: 365,
+                      height: 60,
+                    ),
                   )
                 ],
               ),
+              SizedBox(height: 20,),
               Padding(
-                padding: const EdgeInsets.only(top: 220, left: 30),
+                padding: const EdgeInsets.only(top: 200, left: 30),
                 child: Image.asset(
                   'assets/Frame 17.png',
-                  height: 150,
+                  height: 160,
                   width: 360,
                 ),
               ),
@@ -66,119 +75,119 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20,),
             Column(
               children: [
-SingleChildScrollView(
+        SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-
-  child:   Row(
-  
-    children: [   
-  
-       Padding(
-  
+        
+        child:   Row(
+        
+          children: [   
+        
+             Padding(
+        
          padding: const EdgeInsets.only(left:35.0),
-  
+        
          child: MaterialButton(
-  
+        
           color: const Color(0xffC67C4E),
-  
+        
           minWidth: 121,
-  
+        
            height: 38,
-  
+        
            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-  
+        
           onPressed: (){
-  
-  
-       
-  
+        
+        
+             
+        
            },child: const Text("Cappuccino",style: TextStyle(color: Colors.white,fontSize: 16),),),
-  
-       ),
-  
-       SizedBox(width: 5,),
-  
-  
-  
-       MaterialButton(
-  
+        
+             ),
+        
+             SizedBox(width: 5,),
+        
+        
+        
+             MaterialButton(
+        
         elevation: 0,
-  
+        
         color: Color.fromARGB(255, 248, 247, 247),
-  
+        
         minWidth: 88,
-  
-      height: 38,
-  
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-  
+        
+            height: 38,
+        
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        
         onPressed: (){
-  
+        
                                   Navigator.push(context,
-  
+        
                       MaterialPageRoute(builder: (context) => MachiatoScreen(onTap: () {  },),));
-  
-  
-  
-      },child: const Text("Machiato",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
-  
-  SizedBox(width: 5,),
-  
-       MaterialButton(
-  
+        
+        
+        
+            },child: const Text("Machiato",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
+        
+        SizedBox(width: 5,),
+        
+             MaterialButton(
+        
         elevation: 0,
-  
+        
         color: Color.fromARGB(255, 248, 247, 247),
-  
+        
         minWidth: 69,
-  
-      height: 38,
-  
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-  
+        
+            height: 38,
+        
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        
         onPressed: (){
-  
+        
                                   Navigator.push(context,
-  
+        
                       MaterialPageRoute(builder: (context) => MachiatoScreen(onTap: () {  },),));
-  
-  
-  
-      },child: const Text("Latte",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
-  
-  SizedBox(width: 5,),
-  
-       MaterialButton(
-
-     elevation: 0,
-  
+        
+        
+        
+            },child: const Text("Latte",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
+        
+        SizedBox(width: 5,),
+        
+             MaterialButton(
+        
+           elevation: 0,
+        
         color: Color.fromARGB(255, 248, 247, 247),
-  
+        
         minWidth: 69,
-  
-      height: 38,
-  
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-  
+        
+            height: 38,
+        
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        
         onPressed: (){
-  
+        
                                   Navigator.push(context,
-  
+        
                       MaterialPageRoute(builder: (context) => MachiatoScreen(onTap: () {  },),));
-  
-  
-  
-      },child: const Text("Ar",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
-  
-  
-  
-  ],
-  
-  ),
-),
-
+        
+        
+        
+            },child: const Text("Ar",style: TextStyle(color: Color.fromARGB(255, 27, 27, 27),fontSize: 16),),),
+        
+        
+        
+        ],
+        
+        ),
+        ),
+        
             const SizedBox(height: 20,),
-
+        
                 Padding(
                   padding: const EdgeInsets.only(left:30.0),
                   child: Row(children: [
@@ -186,24 +195,24 @@ SingleChildScrollView(
                               onTap: () {
                                                                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
+        
                               },
                               child: Image.asset("assets/Group 3148.png",height: 270,width: 170,)),
                                         const SizedBox(width: 20,),
-
+        
                             GestureDetector(
                               onTap: () {
                                                                                                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
-
+        
+        
                               },
                               child: Image.asset("assets/Group 3149.png",height: 270,width: 170,))
                             
                   ],),
                 ),
                             const SizedBox(height: 20,),
-
+        
                               Padding(
                   padding: const EdgeInsets.only(left:30.0),
                                 child: Row(children: [
@@ -211,8 +220,8 @@ SingleChildScrollView(
                                             onTap: () {
                                                                                                               Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
-
+        
+        
                                             },
                                             child: Image.asset("assets/Group 3148.png",height: 270,width: 170,)),
                                                       const SizedBox(width: 20,),
@@ -221,15 +230,15 @@ SingleChildScrollView(
                                             onTap: () {
                                                                                                               Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
-
+        
+        
                                             },
                                             child: Image.asset("assets/Group 3149.png",height: 270,width: 170,))
                                           
                                               ],),
                               ),
                                                           const SizedBox(height: 20,),
-
+        
                               Padding(
                   padding: const EdgeInsets.only(left:30.0),
                                 child: Row(children: [
@@ -237,8 +246,8 @@ SingleChildScrollView(
                                             onTap: () {
                                                                                                               Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DetailScreen(onTap: () {  },),));
-
-
+        
+        
                                             },
                                             child: Image.asset("assets/Group 3148.png",height: 270,width: 170,)),
                                                       const SizedBox(width: 20,),
@@ -247,7 +256,7 @@ SingleChildScrollView(
                                           
                                               ],),
                               ),
-
+        
             
               ],
             )
@@ -255,22 +264,17 @@ SingleChildScrollView(
         ),
       ),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        height: 99,
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         destinations: [
-        Padding(
-          padding: const EdgeInsets.only(left: 25),
-          child: GestureDetector(onTap: () {
-            print("home");
-          },
-            child: Image.asset(
-              'assets/Home.png',
-              width: 20,
-              height: 19,
-            ),
+        GestureDetector(onTap: () {
+          print("home");
+        },
+          child: Image.asset(
+            'assets/Home.png',
+            width: 24,
+            height: 24,
           ),
-        ),
-        const SizedBox(
-          height: 19,
         ),
         GestureDetector(onTap: () {
                       print("heart");
@@ -278,11 +282,9 @@ SingleChildScrollView(
         },
           child: Image.asset(
             'assets/Heart.png',
-            height: 19,
+            height: 24,
+            width: 24,
           ),
-        ),
-        const SizedBox(
-          height: 19,
         ),
         GestureDetector(onTap: () {
                       print("bag");
@@ -290,11 +292,9 @@ SingleChildScrollView(
         },
           child: Image.asset(
             'assets/Bag 3.png',
-            height: 19,
+            height: 24,
+            width: 24,
           ),
-        ),
-        const SizedBox(
-          height: 10,
         ),
         GestureDetector(onTap: () {
                       print("Notification");
@@ -302,10 +302,10 @@ SingleChildScrollView(
         },
           child: Image.asset(
             'assets/Notification.png',
-            height: 19,
+            height: 24,
+            width: 24,
           ),
         ),
-        const Padding(padding: EdgeInsets.all(0.8))
       ]),
     );
 
