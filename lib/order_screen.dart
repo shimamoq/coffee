@@ -35,6 +35,7 @@ class OrderScreenState extends State<OrderScreen> {
               ),
             ),
             centerTitle: true,
+            leadingWidth: 90,
             toolbarHeight: 80,
             backgroundColor: Colors.white,
             title: const Text(
@@ -50,10 +51,10 @@ class OrderScreenState extends State<OrderScreen> {
               Stack(
                 children: [
                   Row(children: [
-                    const Padding(padding: EdgeInsets.only(left: 50)),
+                    const Padding(padding: EdgeInsets.only(left: 30)),
                     Container(
-                      height: 48,
-                      width: 315,
+                      height: 55,
+                      width: 345,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14),
                         color: const Color(0xffF2F2F2),
@@ -61,15 +62,15 @@ class OrderScreenState extends State<OrderScreen> {
                     ),
                   ]),
                   Row(children: [
-                    const Padding(padding: EdgeInsets.only(left: 40)),
+                    const Padding(padding: EdgeInsets.only(left: 33, top: 53)),
                     MaterialButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       elevation: 0,
                       color: const Color(0xffC67C4E),
-                      height: 40,
-                      minWidth: 153.5,
+                      height: 47,
+                      minWidth: 170.5,
                       onPressed: () {},
                       child: const Text(
                         "Deliver",
@@ -87,14 +88,14 @@ class OrderScreenState extends State<OrderScreen> {
                       elevation: 0,
                       color: const Color(0xffF2F2F2),
                       height: 40,
-                      minWidth: 153.5,
+                      minWidth: 150,
                       onPressed: () {},
                       child: const Text(
                         "Pick Up",
                         style: TextStyle(
                             color: Colors.black,
                             fontFamily: "sora",
-                            fontWeight: FontWeight.bold),
+                            fontSize: 15),
                       ),
                     ),
                   ]),
@@ -139,10 +140,10 @@ class OrderScreenState extends State<OrderScreen> {
                     elevation: 0,
                     color: Colors.white,
                     height: 27,
-                    minWidth: 120,
+                    minWidth: 140,
                     onPressed: () {},
                     child: const Text(
-                      "Edit Adress",
+                      "Edit Address",
                       style: TextStyle(
                           color: Color(0xff303336),
                           fontSize: 12,
@@ -181,9 +182,9 @@ class OrderScreenState extends State<OrderScreen> {
                 children: [
                   const Padding(padding: EdgeInsets.only(left: 40)),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(17),
+                    //borderRadius: BorderRadius.circular(30),
                     child: Image.asset(
-                      "assets/coffe.jpg",
+                      "assets/coffee2.jpg",
                       height: 54,
                       width: 54,
                     ),
@@ -216,11 +217,15 @@ class OrderScreenState extends State<OrderScreen> {
                     width: 90,
                   ),
                   Container(
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(40),
                       border: Border.all(color: Colors.black12),
+                    ),
+                    padding: EdgeInsets.only(
+                      right: 25,
+                      bottom: 10,
                     ),
                     child: IconButton(
                       onPressed: () {
@@ -232,7 +237,7 @@ class OrderScreenState extends State<OrderScreen> {
                       },
                       icon: Icon(
                         Icons.remove,
-                        size: 20,
+                        size: 18,
                         color: Colors.black12,
                       ),
                     ),
@@ -242,18 +247,19 @@ class OrderScreenState extends State<OrderScreen> {
                   ),
                   Text(
                     "$i",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 18),
                   ),
                   Container(
                     width: 9,
                   ),
                   Container(
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(40),
                       border: Border.all(color: Colors.black12),
                     ),
+                    padding: EdgeInsets.only(right: 25, bottom: 10),
                     child: IconButton(
                       onPressed: () {
                         setState(() {
@@ -264,7 +270,7 @@ class OrderScreenState extends State<OrderScreen> {
                       },
                       icon: Icon(
                         Icons.add,
-                        size: 20,
+                        size: 15,
                       ),
                     ),
                   ),
@@ -435,15 +441,15 @@ class OrderScreenState extends State<OrderScreen> {
                 height: 8,
               ),
               Row(children: [
-                const Padding(padding: EdgeInsets.only(left: 50)),
+                const Padding(padding: EdgeInsets.only(left: 40)),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 0,
                   color: const Color(0xffC67C4E),
-                  height: 62,
-                  minWidth: 315,
+                  height: 65,
+                  minWidth: 340,
                   onPressed: () {
                     Navigator.push(
                         context,

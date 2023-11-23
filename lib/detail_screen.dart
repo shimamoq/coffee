@@ -1,6 +1,7 @@
 import 'package:coffe/home_screen.dart';
 import 'package:coffe/order_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key, required Null Function() onTap});
@@ -11,6 +12,7 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreennState extends State<DetailScreen> {
   double i = 4.8;
+  bool isReadMore = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,6 +20,7 @@ class _DetailScreennState extends State<DetailScreen> {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          leadingWidth: 80,
           elevation: 0,
           leading: IconButton(
             color: Colors.black,
@@ -34,25 +37,22 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           actions: [
             GestureDetector(
-              onTap: () {
-                print("faivorte");
-              },
-              child: Image.asset(
-                "assets/Heart.jpg",
-                height: 35,
-                width: 35,
-              ),
-            ),
+                onTap: () {
+                  print("faivorte");
+                },
+                child: Image.asset("assets/Heart.jpg",
+                    height: 55, width: 55, alignment: Alignment.centerLeft)),
           ],
           centerTitle: true,
-          toolbarHeight: 70,
+          toolbarHeight: 80,
           backgroundColor: Colors.white,
           title: const Text(
             "Details ",
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontFamily: "sora"),
+                fontFamily: "sora",
+                fontSize: 18),
           ),
         ),
         body: Column(children: [
@@ -74,7 +74,7 @@ class _DetailScreennState extends State<DetailScreen> {
               Padding(padding: EdgeInsets.only(left: 25)),
               Text("Cappucino ",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontFamily: "sora"))
             ],
@@ -84,10 +84,10 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           const Row(
             children: [
-              Padding(padding: EdgeInsets.only(left: 25)),
+              Padding(padding: EdgeInsets.only(left: 27)),
               Text("with Chocolate ",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 12,
                       color: Color(0xff9B9B9B),
                       fontFamily: "sora")),
             ],
@@ -108,8 +108,8 @@ class _DetailScreennState extends State<DetailScreen> {
                 },
                 child: Image.asset(
                   "assets/star.jpg",
-                  height: 22,
-                  width: 22,
+                  height: 20,
+                  width: 20,
                 ),
               ),
               Container(
@@ -118,7 +118,7 @@ class _DetailScreennState extends State<DetailScreen> {
               Text(
                 "$i",
                 style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
                     fontFamily: "sora",
                     fontWeight: FontWeight.bold),
               ),
@@ -169,7 +169,7 @@ class _DetailScreennState extends State<DetailScreen> {
           ),
           Container(
             width: 9,
-            height: 25,
+            height: 20,
           ),
           Row(children: [
             const Padding(padding: EdgeInsets.only(left: 25)),
@@ -189,30 +189,105 @@ class _DetailScreennState extends State<DetailScreen> {
               Padding(padding: EdgeInsets.only(left: 25)),
               Text("Description",
                   style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       fontFamily: "sora"))
             ],
           ),
           Container(
-            height: 8,
+            height: 15,
           ),
-          Row(
-            children: [
-              const Padding(padding: EdgeInsets.only(left: 25)),
-              Image.asset(
-                "assets/Read More.jpg",
-                height: 100,
-                width: 360,
-              )
-            ],
+
+          Row(children: [
+            //crossAxisAlignment: CrossAxisAlignment.start,
+//  mainAxisAlignment: MainAxisAlignment.start,
+            //   Container(
+            //     width: 10,
+            //   ),
+            //  const Padding(padding: EdgeInsetsDirectional.all(14)),
+            const Padding(
+                padding: EdgeInsets.only(
+              left: 25,
+            )),
+            //  const Card(
+            // child: Padding(
+            // padding: EdgeInsets.only(right: 25)),
+            Expanded(
+              child: ReadMoreText(
+                'A-cappuccino is an approximately 150 ml (5 '
+                'oz)beverage, with 25 ml of espresso coffee '
+                'and85ml of fresh milk the fo ooooooooooooooooooo ',
+                style: TextStyle(
+                    fontFamily: "sora",
+                    fontSize: 14,
+                    color: Colors.black26,
+                    height: 1.6),
+                trimLines: 3,
+                trimMode: TrimMode.Line,
+                trimCollapsedText: 'Read More',
+                trimExpandedText: 'Read Less',
+                moreStyle: TextStyle(
+                  color: Color(0xffC67C4E),
+                  fontFamily: "sora",
+                  fontWeight: FontWeight.bold,
+                ),
+                lessStyle: TextStyle(
+                    color: Color(0xffC67C4E),
+                    fontFamily: "sora",
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            //  ),
+          ]),
+          //  ),
+          // ),
+
+          // TextField(
+          //  maxLines: 4,
+
+          // ),
+          // Image.asset(
+          //   "assets/Read More.jpg",
+          //   height: 100,
+          //   width: 360,
+          // )
+          //   ],
+          // ),
+          //   ListView(
+          //  ElevatedButton(
+          //       onPressed: () {
+          //         setState(() {
+          //           // toggle the bool variable true or false
+          //           isReadMore = !isReadMore;
+          //         }
+          //         );
+          //       },
+          //       child: Text((isReadMore ? 'Read Less' : 'Read More'))),
+
+          //   Widget buildText(String text){
+
+          //     // if read more is false then show only 3 lines from text
+          //     // else show full text
+          //      lines = isReadMore ? null : 3;
+          //     return Text(
+          //       text,
+          //       style: TextStyle(fontSize: 25),
+          //       maxLines: lines,
+          //        overflow: isReadMore ? TextOverflow.visible: TextOverflow.ellipsis,
+          //     );
+
+          //   },
+          //   ),
+
+          Container(
+            height: 15,
           ),
           const Row(
             children: [
               Padding(padding: EdgeInsets.only(left: 25)),
               Text("Size",
                   style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       fontFamily: "sora"))
             ],
@@ -286,8 +361,10 @@ class _DetailScreennState extends State<DetailScreen> {
                 children: [
                   const Text(
                     "Price",
-                    style:
-                        TextStyle(color: Color(0xff9B9B9B), fontFamily: "sora"),
+                    style: TextStyle(
+                        color: Color(0xff9B9B9B),
+                        fontFamily: "sora",
+                        fontSize: 14),
                   ),
                   Container(
                     height: 10,
